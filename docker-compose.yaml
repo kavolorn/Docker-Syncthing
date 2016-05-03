@@ -1,0 +1,11 @@
+version: '2'
+services:
+  syncthing:
+    image: kavolorn/syncthing:release-0.12.22
+    command: syncthing -gui-address="https://0.0.0.0:8384"
+    cpuset: 0-1
+    ports:
+     - 22000:22000
+     - 8384:8384
+    volumes:
+     - /root/Syncthing:/root

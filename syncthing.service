@@ -1,0 +1,12 @@
+[Unit]
+Description=Syncthing service
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker start -a dockersyncthing_syncthing_1
+ExecStop=/usr/bin/docker stop -t 2 dockersyncthing_syncthing_1
+
+[Install]
+WantedBy=multi-user.target
