@@ -10,4 +10,4 @@ RUN apt-get update  \
     && curl -s https://syncthing.net/release-key.txt | apt-key add - \
     && echo "deb http://apt.syncthing.net/ syncthing release" | tee /etc/apt/sources.list.d/syncthing.list \
     && apt-get update \
-    && apt-get -y install syncthing=0.14.26
+    && apt-get -y install syncthing=0.14.40
